@@ -10,16 +10,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class ContactService {
 
-    private HubSpotClient hubSpotClient;
+    private final HubSpotClient hubSpotClient;
 
-    public ContactService(HubSpotClient hubSpotClient) {
-        this.hubSpotClient = hubSpotClient;
-    }
-
-    public List<ContactsResponse> getAllContacts() {
-        HubSpotContactsResponse hubSpotContactsResponse = hubSpotClient.findAllContactsFromHubSpot();
+    public List<ContactsResponse> getAllContacts(String authorization) {
+        HubSpotContactsResponse hubSpotContactsResponse = hubSpotClient.findAllContactsFromHubSpot(authorization);
         return hubSpotContactsResponse.getResults().stream().map(e ->{
             return ContactsResponse.builder()
                     .id(e.getId())
