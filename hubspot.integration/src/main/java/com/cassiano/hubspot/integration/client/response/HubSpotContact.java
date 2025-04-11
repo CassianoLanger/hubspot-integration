@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 import java.time.OffsetDateTime;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class HubSpotContact {
     private String id;
     private Properties properties;
@@ -25,6 +25,7 @@ public class HubSpotContact {
     private boolean archived;
 
     @Data
+    @Builder
     public static class Properties {
         private String createdate;
         private String email;

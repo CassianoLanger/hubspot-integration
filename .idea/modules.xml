@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/hubspot-integration.iml" filepath="$PROJECT_DIR$/.idea/hubspot-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hubspot.integration.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hubspot.integration.main.iml" />
     </modules>
   </component>
 </project>

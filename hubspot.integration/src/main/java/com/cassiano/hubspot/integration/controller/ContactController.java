@@ -1,5 +1,6 @@
 package com.cassiano.hubspot.integration.controller;
 
+import com.cassiano.hubspot.integration.controller.request.ContactRequest;
 import com.cassiano.hubspot.integration.controller.response.ContactsResponse;
 import com.cassiano.hubspot.integration.service.ContactService;
 import lombok.RequiredArgsConstructor;
@@ -24,9 +25,10 @@ public class ContactController {
     }
 
     @PostMapping//add requestBody
-    public ResponseEntity< List<ContactsResponse>> createContact(@RequestHeader("Authorization") String authorization){
+    public ResponseEntity<ContactRequest> createContact(@RequestHeader("Authorization") String authorization,
+                                                                 @RequestBody ContactRequest contact){
 
-        List<ContactsResponse> contactsResponse = contacService.getAllContacts(authorization);
-        return ResponseEntity.ok(contactsResponse);
+        ContactRequest contactRequest = contacService.saveContact(authorization, contact);
+        return ResponseEntity.ok(contactRequest);
     }
 }
