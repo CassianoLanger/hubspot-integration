@@ -24,11 +24,16 @@ public class ContactController {
         return ResponseEntity.ok(contactsResponse);
     }
 
-    @PostMapping//add requestBody
+    @PostMapping
     public ResponseEntity<ContactRequest> createContact(@RequestHeader("Authorization") String authorization,
-                                                                 @RequestBody ContactRequest contact){
+                                                        @RequestBody ContactRequest contact){
 
         ContactRequest contactRequest = contacService.saveContact(authorization, contact);
         return ResponseEntity.ok(contactRequest);
+    }
+
+    @GetMapping("/auth-callback")
+    public ResponseEntity<Void> callback(@RequestParam String code){
+        return ResponseEntity.ok().build();
     }
 }
