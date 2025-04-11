@@ -31,9 +31,4 @@ public class ContactController {
         ContactRequest contactRequest = contacService.saveContact(authorization, contact);
         return ResponseEntity.ok(contactRequest);
     }
-
-    @GetMapping("/auth-callback")
-    public ResponseEntity<Void> callback(@RequestParam String code){
-        return ResponseEntity.ok().build();
-    }
 }
