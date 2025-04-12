@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @Service
 @RequiredArgsConstructor
 public class ContactService {
@@ -39,6 +40,11 @@ public class ContactService {
                 .email(contact.getEmail())
                 .build();
 
+        if (isNullOrEmpty(contact.getFirstName()) || isNullOrEmpty(contact.getLastName()) ||
+                isNullOrEmpty(contact.getEmail())) {
+            throw new IllegalArgumentException("Name, last Name and e-mail cant be empty or null!");
+        }
+
         HubSpotContactRequest.Properties properties = hubSpotClient.saveContact(authorization,
                 HubSpotContactRequest.builder().properties(build).build()).getProperties();
 
@@ -47,5 +53,9 @@ public class ContactService {
                 .lastName(properties.getLastname())
                 .email(properties.getEmail())
                 .build();
+    }
+
+    private boolean isNullOrEmpty(String value) {
+        return value == null || value.trim().isEmpty();
     }
 }
