@@ -35,10 +35,13 @@ Com os seguintes parâmetros (form-urlencoded):
 | `redirect_uri`  | `http://localhost:8080/authentication/callback`                       |
 | `code`          | O código recebido na etapa anterior (`na1-...`)                       |
 
+E para esse caso é necessário adicionar Content-Type = application/x-www-form-urlencoded nos Headers da chamada
+
 Exemplo de chamada com todos os parâmetros:
 
-
 https://api.hubapi.com/oauth/v1/token/?grant_type=authorization_code&client_id=xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&client_secret=xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&redirect_uri=http://localhost:8080/authentication/callback&code=xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+![image](https://github.com/user-attachments/assets/e314218e-eefc-4922-b4bb-388d1e2d8ae0)
 
 ---
 
