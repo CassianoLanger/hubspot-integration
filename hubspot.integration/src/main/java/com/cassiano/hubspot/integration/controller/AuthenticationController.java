@@ -28,7 +28,4 @@ public class AuthenticationController {
                 grantType, clientId, clientSecret, redirectUri, code
         ));
     }
-    //https://api.hubapi.com/oauth/v1/token/?grant_type=authorization_code&client_id=54722c36-746c-43b7-97dd-e03bb39c4e96&client_secret=c890aaf2-00f3-43a9-8175-8d51119fe9ce&redirect_uri=http://localhost:8080/contacts/auth-callback&code=na1-0aa3-deaa-4f5c-88ab-6ab1a447937e
-
-
 }
