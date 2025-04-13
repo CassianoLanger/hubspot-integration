@@ -73,15 +73,16 @@ https://api.hubapi.com/oauth/v1/token/?grant_type=authorization_code&client_id=x
 
 ✅ Requisitos:
 
-    -Java 17+;
+    -Java 17: Por ser uma das versões LTS mais recentes e por ser o minimo necessário para usar a versão 3.2.5 do Spring Boot;
 
-    -Spring Boot 3.2.5;
+    -Spring Boot 3.2.5: Melhor compatibilidade com bibliotecas e correção de bugs e vulnerabilidades de verções anteriores;
 
     -Conta HubSpot com app registrado;
 
-    -Dependências: Feign (para o client HTTP), Spring Web, Lombok;
+    -Dependências: Feign (para o client HTTP) por simplificar o consumo de APIs REST externas, Spring Web é ssencial para a criação de endpoints REST
+     e Lombok para reduzir tamanho do código e ganhando mais produtividade;
 
-    -Gradle versão 4;
+    -Gradle versão 4 escolha devido a compatibilidade com o ambiente atual;
 
 📎 Observações:
 
