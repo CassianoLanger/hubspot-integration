@@ -5,6 +5,8 @@ Este projeto realiza a autenticação via OAuth com a API do HubSpot e permite r
 
 ---
 
+Para executar a aplicação execute a aplicação na sua IDE e utilize http://localhost:8080/authentication/callback como redirect_uri.
+
 ## 🔐 Fluxo OAuth com HubSpot
 
 ### 1. Obter Código de Autorização (Authorization Code)
@@ -78,6 +80,8 @@ https://api.hubapi.com/oauth/v1/token/?grant_type=authorization_code&client_id=x
     -Conta HubSpot com app registrado;
 
     -Dependências: Feign (para o client HTTP), Spring Web, Lombok;
+
+    -Gradle versão 4;
 
 📎 Observações:
 
