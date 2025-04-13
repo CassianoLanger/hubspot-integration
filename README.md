@@ -75,7 +75,7 @@ https://api.hubapi.com/oauth/v1/token/?grant_type=authorization_code&client_id=x
 
     -Java 17+;
 
-    -Spring Boot;
+    -Spring Boot 3.2.5;
 
     -Conta HubSpot com app registrado;
 
